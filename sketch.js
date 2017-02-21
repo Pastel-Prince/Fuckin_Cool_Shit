@@ -14,7 +14,6 @@ function draw() {
     s.death();
     s.update();
     s.show();
-    s.forceEat();
     frameRate(s.speed);
 
     if (s.eat(food)) {
