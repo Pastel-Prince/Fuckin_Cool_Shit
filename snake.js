@@ -39,7 +39,7 @@ function Snake() {
         }
       }
     }
-
+//
     this.update = function() {
         if (this.total === this.tail.length) {
             for (var i = 0; i < this.tail.length - 1; i++) {
