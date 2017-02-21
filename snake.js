@@ -16,7 +16,7 @@ function Snake() {
 
     this.eat = function(pos) {
         var d = dist(this.x, this.y, pos.x, pos.y);
-        if (d < 1) {
+        if (d < 1 ||) {
             this.total++;
             this.speed += 1;
             console.log(this.speed);

@@ -3,17 +3,18 @@ var scl = 20;
 var food;
 
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(900, 600);
     s = new Snake();
     pickLocation();
     colorMode(HSL);
 }
 
 function draw() {
-    background(s.randCol,120,s.light + 10);
+    background(51);
     s.death();
     s.update();
     s.show();
+    s.forceEat();
     frameRate(s.speed);
 
     if (s.eat(food)) {
@@ -42,4 +43,13 @@ function keyPressed() {
     } else if (keyCode === LEFT_ARROW) {
         s.dir(-1, 0);
     }
+}
+forceEat = function(){
+  if (keyCode === UP_ARROW){
+    s.total++;
+    s.speed += 1;
+    console.log(this.speed);
+    s.randCol = Math.floor((Math.random()*360)+1);
+    return true;
+  }
 }
